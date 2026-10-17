@@ -1,0 +1,10 @@
+{
+  "LicenseRef-Qt-Commercial-installed.txt": "site-packages/pyside6-6.11.1.dist-info/licenses/LicenseRef-Qt-Commercial.txt",
+  "PyInstaller-COPYING.txt": "site-packages/pyinstaller-6.22.2.dist-info/licenses/COPYING.txt",
+  "Shiboken6-installed-METADATA.txt": "site-packages/shiboken6-6.11.1.dist-info/METADATA",
+  "PySide6-Essentials-installed-METADATA.txt": "site-packages/pyside6_essentials-6.11.1.dist-info/METADATA",
+  "PySide6-Addons-installed-METADATA.txt": "site-packages/pyside6_addons-6.11.1.dist-info/METADATA",
+  "pygame-ce-LGPL-2.1.txt": "site-packages/pygame/docs/generated/LGPL.txt",
+  "pygame-ce-installed-METADATA.txt": "site-packages/pygame_ce-2.5.8.dist-info/METADATA",
+  "PySide6-installed-METADATA.txt": "site-packages/pyside6-6.11.1.dist-info/METADATA"
+}

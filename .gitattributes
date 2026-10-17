@@ -1,0 +1,9 @@
+* text=auto eol=lf
+# Preserve upstream license bytes so their provenance hashes remain valid.
+licenses/** -text
+assets/fonts/OFL.txt -text
+*.wav binary
+*.mp4 binary
+*.ttf binary
+*.ico binary
+*.png binary

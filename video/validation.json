@@ -1,0 +1,9 @@
+{
+  "decoded_without_errors": true,
+  "verified_items": 46,
+  "maximum_frame_mean_absolute_error": 1.5238245884773662,
+  "minimum_audio_correlation": 0.9966076494442169,
+  "decoded_audio_seconds": 118.9558276643991,
+  "intended_duration_seconds": 118.93333333333334,
+  "largest_highlight_tail_seconds": 0.030000000000015348
+}

@@ -1,0 +1,9 @@
+{
+  "name": "hindi-sounds-video",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Headless frame rendering for the Hindi Sounds companion video",
+  "engines": { "node": ">=20" },
+  "scripts": { "check": "node render_frames.cjs --check" },
+  "dependencies": { "playwright": "1.62.1" }
+}

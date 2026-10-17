@@ -1,0 +1,32 @@
+{
+  "av_version_info": "7.1.3",
+  "avutil_license": "LGPL version 2.1 or later",
+  "avutil_configuration": "--prefix=/c/FFmpeg-n7.1.3/build/msvc/installed --disable-programs --disable-doc --disable-debug --enable-network --disable-lzma --enable-pic --disable-vulkan --disable-v4l2-m2m --disable-decoder=truemotion1 --enable-zlib --extra-cflags='-IC:/zlib-1.3.1/build/amd64' --extra-ldflags='-LIBPATH:C:/zlib-1.3.1/build/amd64' --toolchain=msvc --enable-shared --disable-static",
+  "Qt": "6.11.1",
+  "pygame-ce": "2.5.8",
+  "SDL": [
+    2,
+    32,
+    10
+  ],
+  "SDL_image": [
+    2,
+    8,
+    12
+  ],
+  "SDL_mixer": [
+    2,
+    8,
+    2
+  ],
+  "SDL_ttf": [
+    2,
+    24,
+    0
+  ],
+  "FreeType": [
+    2,
+    11,
+    1
+  ]
+}
