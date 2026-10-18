@@ -10,6 +10,7 @@ Hindi-Sounds-Windows.zip
 .env.*
 reports/screenshots/
 reports/packaged-screenshots/
+reports/single-file-screenshots/
 reports/*.json
 video/frames/
 video/verified-frames/
