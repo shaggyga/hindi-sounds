@@ -4,6 +4,19 @@ An offline Windows app for practicing Hindi letter sounds. Each letter appears w
 
 ![Hindi Sounds practice screen](docs/practice.png)
 
+## One Python file
+
+Download [HindiSounds_Standalone.py](https://github.com/shaggyga/hindi-sounds/releases/latest/download/HindiSounds_Standalone.py). It contains the application code, all 46 recordings, the Devanagari font, icon, and full credits. No repository checkout or separate asset folder is needed.
+
+With Python 3.12+ installed, run:
+
+```powershell
+python -m pip install PySide6==6.11.1
+python HindiSounds_Standalone.py
+```
+
+For controller support, also install `pygame-ce==2.5.8`. Keyboard and mouse controls work without pygame. Assets are unpacked to a temporary folder for playback and removed when the app closes. To save the embedded audio, font, and notices, run `python HindiSounds_Standalone.py --extract-assets saved-assets`.
+
 ## Launch
 
 Download **Hindi-Sounds-Windows.zip** from the [latest release](https://github.com/shaggyga/hindi-sounds/releases/latest), extract the entire archive, and open **Hindi Sounds.exe** inside the extracted folder. Keep the `_internal` folder beside the executable. Python is not required. The app stores its progress and settings in `%LOCALAPPDATA%/HindiSoundsApp`.
@@ -37,10 +50,12 @@ The app opens paused at the menu. Opening a menu or minimizing pauses playback. 
 
 Requires Python 3.12 or 3.13. Install `requirements-build.txt`, run `python -m hindi_sounds.main`, test with `python -m pytest tests`, and package with `python -m PyInstaller --noconfirm --workpath build --distpath release HindiSounds.spec`.
 
+Regenerate the one-file edition after changing the code or assets with `python tools/build_single_file.py`. The generated `HindiSounds_Standalone.py` is included in the repository and release downloads.
+
 `--smoke-test REPORT_JSON` runs actual bundled audio decoding with volume at zero, checks the final two sounds and wrap to the first, and exits with a report. `--screenshot-dir PATH` captures the practice/menu states. Both use isolated temporary settings. `--windowed` overrides the saved screen mode for the launch.
 
 The packaging spec excludes unrelated ICU DLLs from other programs, so Qt uses Windows' system ICU. This prevents the QtCore startup error described in `reports/packaging-diagnosis.md`. `python reports/check_bundle.py` checks this isolation and all 46 bundled recordings.
 
 ## Verification
 
-29 automated playback and interface tests passed. The packaged executable passed real audio decoding and loop-wrap checks; packaged screenshots verified the font and layout. The MP4's 46 image/audio pairs passed synchronization and full-decode checks. A physical controller has not been tested.
+Automated checks cover playback, the interface, and the single-file edition's embedded assets and import independence. The executable and standalone script are also checked with real audio decoding and loop-wrap checks. The MP4's 46 image/audio pairs passed synchronization and full-decode checks. A physical controller has not been tested.
